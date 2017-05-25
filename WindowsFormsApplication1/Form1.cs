@@ -300,12 +300,6 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-
-
-        }
-
         class Grid1
         {
             public string codigo { get; set; }

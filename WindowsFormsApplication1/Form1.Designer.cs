@@ -76,10 +76,7 @@
             this.button2.Text = "Teste Lento";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // timer2
-            // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+
             // 
             // Form1
             // 
