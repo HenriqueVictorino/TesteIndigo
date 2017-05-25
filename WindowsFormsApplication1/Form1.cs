@@ -147,6 +147,9 @@ namespace WindowsFormsApplication1
                 webBrowser1.Document.GetElementsByTagName("textarea")[0].SetAttribute("value", string.Join("\n", ListaGrid1.OrderBy(a => a.codigo).Select(a => a.codigo)));
                 webBrowser1.Document.GetElementsByTagName("textarea")[1].SetAttribute("value", string.Join("\n", ListaGrid1.OrderBy(a => a.apelido).Select(a => a.apelido)));
 
+                if (!VelocidadeRapida)
+                    Thread.Sleep(5000);
+
                 webBrowser1.Document.GetElementById("Submit").InvokeMember("click");
 
 
@@ -155,8 +158,6 @@ namespace WindowsFormsApplication1
             }
             else if (nPasso == 3)
             {
-                if (!VelocidadeRapida)
-                    Thread.Sleep(5000);
 
                 webBrowser1.Navigate("http://indigo.rafson.com.br/02.php");
 
@@ -175,13 +176,16 @@ namespace WindowsFormsApplication1
 
                 webBrowser1.Document.GetElementsByTagName("textarea")[0].SetAttribute("value", texto2);
 
+
+                if (!VelocidadeRapida)
+                    Thread.Sleep(5000);
+
                 webBrowser1.Document.GetElementById("Submit").InvokeMember("click");
                 nPasso++;
             }
             else if (nPasso == 5)
             {
-                if (!VelocidadeRapida)
-                    Thread.Sleep(5000);
+                
 
                 webBrowser1.Navigate("http://indigo.rafson.com.br/03.php");
 
@@ -235,14 +239,16 @@ namespace WindowsFormsApplication1
 
                 sel.GetElementsByTagName("option")[4].SetAttribute("selected", "selected");
 
+
+                if (!VelocidadeRapida)
+                    Thread.Sleep(6000);
+
                 webBrowser1.Document.GetElementById("Submit").InvokeMember("click");
 
                 nPasso++;
             }
             else if (nPasso == 7)
             {
-                if (!VelocidadeRapida)
-                    Thread.Sleep(5000);
 
                 webBrowser1.Navigate("http://indigo.rafson.com.br/04.php");
                 nPasso++;
@@ -256,8 +262,7 @@ namespace WindowsFormsApplication1
             }
             else if (nPasso == 9)
             {
-                if (!VelocidadeRapida)
-                    Thread.Sleep(5000);
+                
 
                 webBrowser1.Navigate("http://indigo.rafson.com.br/05.php");
                 nPasso++;
@@ -295,6 +300,9 @@ namespace WindowsFormsApplication1
             timer1.Enabled = false;
 
             nPasso++;
+
+            if (!VelocidadeRapida)
+                Thread.Sleep(5000);
 
             webBrowser1.Document.GetElementById("Submit").InvokeMember("click");
 
